@@ -6,6 +6,6 @@ RUN apt-get update -qqy && apt-get -qqyy install \
     google-chrome-stable \
   && rm -rf /var/lib/apt/lists/*
 
-RUN groupadd -r nodeapp && useradd --no-log-init -r -g nodeapp nodeapp
+RUN groupadd -r nodeapp && useradd --create-home --no-log-init -r -g nodeapp nodeapp
 
 USER nodeapp
